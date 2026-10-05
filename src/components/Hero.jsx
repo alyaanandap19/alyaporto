@@ -80,8 +80,32 @@ export default function Hero() {
 
               <a
                 data-reveal
+                href="/CV_Alya_Ananda_Putri.pdf"
+                download="CV_Alya_Ananda_Putri.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="reveal group inline-flex h-[48px] items-center justify-center gap-2 rounded-xl border border-indigo-200 bg-[var(--primary-soft)] px-5 text-[0.95rem] font-bold text-[var(--primary)] shadow-[0_2px_8px_rgba(99,102,241,0.1)] transition-all duration-200 hover:bg-[var(--primary)] hover:text-white hover:border-[var(--primary)] hover:-translate-y-0.5 hover:shadow-[0_12px_24px_rgba(99,102,241,0.2)]"
+              >
+                <svg
+                  className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                Unduh CV
+              </a>
+
+              <a
+                data-reveal
                 href="#contact"
-                className="reveal inline-flex h-[48px] items-center justify-center gap-2.5 rounded-xl border border-slate-300 bg-white px-6 text-[0.95rem] font-bold text-[#111827] shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-200 hover:border-slate-400 hover:bg-slate-50 hover:-translate-y-0.5"
+                className="reveal inline-flex h-[48px] items-center justify-center gap-2.5 rounded-xl border border-slate-300 bg-white px-5 text-[0.95rem] font-bold text-[#111827] shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-all duration-200 hover:border-slate-400 hover:bg-slate-50 hover:-translate-y-0.5"
               >
                 Hubungi Saya
                 <svg

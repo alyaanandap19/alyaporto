@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SectionHeader from './SectionHeader'
+import CertificateModal from './CertificateModal'
 import { certifications } from '../data/certifications'
 
 export default function Certifications() {
+  const [selectedCertificate, setSelectedCertificate] = useState(null)
+
   return (
     <section id="certifications" className="section-shell">
       <SectionHeader subtitle="Sertifikasi kompetensi dan pelatihan profesional yang telah saya selesaikan untuk memperdalam pemahaman teknis di bidang database, pemrograman web, dan jaringan.">
@@ -14,7 +17,16 @@ export default function Certifications() {
           <article
             key={cert.id}
             data-reveal
-            className="card-surface group flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-[rgba(17,26,57,0.08)] bg-white/95 p-5 sm:p-6 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg relative overflow-hidden"
+            tabIndex={0}
+            role="button"
+            onClick={() => setSelectedCertificate(cert)}
+            onKeyDown={(e) => {
+              if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault()
+                setSelectedCertificate(cert)
+              }
+            }}
+            className="card-surface group flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-[rgba(17,26,57,0.08)] bg-white/95 p-5 sm:p-6 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg relative overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-[var(--primary)] focus:ring-offset-2"
           >
             {/* Left accent bar on hover */}
             <div className="absolute left-0 top-0 bottom-0 w-1.5 bg-[var(--primary)] opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -22,7 +34,7 @@ export default function Certifications() {
             <div>
               {/* Top: Icon & Issuer Badge */}
               <div className="flex items-center justify-between gap-2">
-                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-100/90 text-xl border border-[rgba(17,26,57,0.06)] shadow-2xs">
+                <div className="flex h-11 w-11 items-center justify-center rounded-2xl bg-slate-100/90 text-xl border border-[rgba(17,26,57,0.06)] shadow-2xs group-hover:scale-105 transition-transform">
                   {cert.icon}
                 </div>
                 <span className={`inline-flex items-center rounded-lg px-2.5 py-1 text-xs font-bold border ${cert.issuerTone}`}>
@@ -38,21 +50,34 @@ export default function Certifications() {
               </div>
             </div>
 
-            {/* Bottom Info: Category & Verified Tag */}
-            <div className="mt-5 flex items-center justify-between border-t border-[rgba(17,26,57,0.06)] pt-3.5 text-xs text-[var(--navy-soft)]">
-              <span className="inline-flex items-center rounded-md bg-slate-100/80 px-2 py-0.5 font-medium text-[var(--navy)]">
-                {cert.category}
-              </span>
-              <span className="inline-flex items-center gap-1 font-semibold text-emerald-600">
-                <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3">
-                  <polyline points="20 6 9 17 4 12" />
-                </svg>
-                <span>Terverifikasi</span>
-              </span>
+            {/* Bottom Info: Category & Action */}
+            <div className="mt-5 border-t border-[rgba(17,26,57,0.06)] pt-3.5">
+              <div className="flex items-center justify-between text-xs text-[var(--navy-soft)]">
+                <span className="inline-flex items-center rounded-md bg-slate-100/80 px-2 py-0.5 font-medium text-[var(--navy)]">
+                  {cert.category}
+                </span>
+                
+                {/* View Certificate Prompt */}
+                <span className="inline-flex items-center gap-1 font-semibold text-[var(--primary)] group-hover:underline">
+                  <span>Lihat PDF</span>
+                  <svg className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                    <path d="M5 12h14M12 5l7 7-7 7" />
+                  </svg>
+                </span>
+              </div>
             </div>
           </article>
         ))}
       </div>
+
+      {/* Certificate PDF Preview Modal */}
+      {selectedCertificate && (
+        <CertificateModal
+          certificate={selectedCertificate}
+          onClose={() => setSelectedCertificate(null)}
+        />
+      )}
     </section>
   )
 }
+

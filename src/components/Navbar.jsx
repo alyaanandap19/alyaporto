@@ -25,19 +25,37 @@ export default function Navbar() {
             Alya Ananda Putri
           </a>
 
-          <nav className="hidden items-center gap-7 md:flex">
-            {links.map((link) => (
-              <a
-                key={link.id}
-                href={`#${link.id}`}
-                className={`nav-item relative text-sm font-medium transition-colors duration-200 ${
-                  activeId === link.id ? 'text-[var(--primary)]' : 'text-[var(--navy)] hover:text-[var(--primary)]'
-                }`}
-              >
-                {link.label}
-              </a>
-            ))}
-          </nav>
+          <div className="hidden items-center gap-6 md:flex">
+            <nav className="flex items-center gap-6 lg:gap-7">
+              {links.map((link) => (
+                <a
+                  key={link.id}
+                  href={`#${link.id}`}
+                  className={`nav-item relative text-sm font-medium transition-colors duration-200 ${
+                    activeId === link.id ? 'text-[var(--primary)]' : 'text-[var(--navy)] hover:text-[var(--primary)]'
+                  }`}
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+
+            {/* Navbar CV Button */}
+            <a
+              href="/CV_Alya_Ananda_Putri.pdf"
+              download="CV_Alya_Ananda_Putri.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 rounded-xl bg-[var(--navy)] px-3.5 py-1.5 text-xs font-bold text-white shadow-sm transition-all hover:bg-[var(--primary)] hover:shadow"
+            >
+              <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                <polyline points="7 10 12 15 17 10" />
+                <line x1="12" y1="15" x2="12" y2="3" />
+              </svg>
+              <span>CV</span>
+            </a>
+          </div>
 
           <div className="md:hidden">
             <button
@@ -69,6 +87,24 @@ export default function Navbar() {
                 {link.label}
               </a>
             ))}
+
+            <div className="pt-2">
+              <a
+                href="/CV_Alya_Ananda_Putri.pdf"
+                download="CV_Alya_Ananda_Putri.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="flex items-center justify-center gap-2 rounded-xl bg-[var(--primary)] px-4 py-2.5 text-xs font-bold text-white shadow-sm"
+              >
+                <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                  <polyline points="7 10 12 15 17 10" />
+                  <line x1="12" y1="15" x2="12" y2="3" />
+                </svg>
+                <span>Unduh CV (PDF)</span>
+              </a>
+            </div>
           </div>
         </div>
       )}

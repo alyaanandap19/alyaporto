@@ -5,7 +5,8 @@ export const certifications = [
     issuer: 'Oracle Academy',
     category: 'Database & SQL',
     icon: '🗄️',
-    issuerTone: 'bg-red-50 text-red-700 border-red-200/60'
+    issuerTone: 'bg-red-50 text-red-700 border-red-200/60',
+    fileUrl: '/certificates/dicoding-sql.pdf'
   },
   {
     id: 2,
@@ -13,7 +14,8 @@ export const certifications = [
     issuer: 'Oracle Academy',
     category: 'Database Design',
     icon: '📐',
-    issuerTone: 'bg-red-50 text-red-700 border-red-200/60'
+    issuerTone: 'bg-red-50 text-red-700 border-red-200/60',
+    fileUrl: '/certificates/oracle-design.pdf'
   },
   {
     id: 3,
@@ -21,7 +23,8 @@ export const certifications = [
     issuer: 'Dicoding',
     category: 'Database',
     icon: '💾',
-    issuerTone: 'bg-blue-50 text-blue-700 border-blue-200/60'
+    issuerTone: 'bg-blue-50 text-blue-700 border-blue-200/60',
+    fileUrl: '/certificates/oracle-sql.pdf'
   },
   {
     id: 4,
@@ -29,7 +32,8 @@ export const certifications = [
     issuer: 'Dicoding',
     category: 'Web Development',
     icon: '🌐',
-    issuerTone: 'bg-blue-50 text-blue-700 border-blue-200/60'
+    issuerTone: 'bg-blue-50 text-blue-700 border-blue-200/60',
+    fileUrl: '/certificates/dicoding-web.pdf'
   },
   {
     id: 5,
@@ -37,7 +41,8 @@ export const certifications = [
     issuer: 'Cisco Networking Academy',
     category: 'Python',
     icon: '🐍',
-    issuerTone: 'bg-emerald-50 text-emerald-700 border-emerald-200/60'
+    issuerTone: 'bg-emerald-50 text-emerald-700 border-emerald-200/60',
+    fileUrl: '/certificates/cisco-python.pdf'
   },
   {
     id: 6,
@@ -45,6 +50,8 @@ export const certifications = [
     issuer: 'Cisco Networking Academy',
     category: 'Networking',
     icon: '🔌',
-    issuerTone: 'bg-emerald-50 text-emerald-700 border-emerald-200/60'
+    issuerTone: 'bg-emerald-50 text-emerald-700 border-emerald-200/60',
+    fileUrl: '/certificates/cisco-ccna.pdf'
   }
 ]
+
