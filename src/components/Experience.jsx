@@ -6,7 +6,7 @@ export default function Experience() {
   return (
     <section id="experience" className="section-shell">
       <SectionHeader subtitle="Pengalaman yang saya peroleh melalui program magang dan kegiatan profesional, dengan fokus pada pengembangan web, frontend, dan pengolahan data.">
-        Pengalaman Kerja
+        Pengalaman Profesional
       </SectionHeader>
 
       <div className="space-y-6">
