@@ -1,5 +1,14 @@
 export const certifications = [
   {
+    id: 7,
+    title: 'Web Development Fundamentals',
+    issuer: 'IBM SkillsBuild',
+    category: 'Web Development',
+    icon: '💻',
+    issuerTone: 'bg-sky-50 text-sky-700 border-sky-200/60',
+    fileUrl: '/certificates/ibm-web-development.pdf'
+  },
+  {
     id: 1,
     title: 'Database Programming with SQL',
     issuer: 'Oracle Academy',
