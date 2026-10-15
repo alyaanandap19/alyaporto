@@ -1,5 +1,14 @@
 export const certifications = [
   {
+    id: 8,
+    title: 'Data Fundamentals',
+    issuer: 'IBM SkillsBuild',
+    category: 'Data & Analytics',
+    icon: '📊',
+    issuerTone: 'bg-sky-50 text-sky-700 border-sky-200/60',
+    fileUrl: '/certificates/ibm-data-fundamentals.pdf'
+  },
+  {
     id: 7,
     title: 'Web Development Fundamentals',
     issuer: 'IBM SkillsBuild',
