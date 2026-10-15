@@ -6,8 +6,10 @@ export const experiences = [
     period: 'Jul 2025 – Sep 2025',
     type: 'Internship',
     logo: '/bps-logo.png',
+    certificateUrl: '/certificates/sertifikat-magang-bps.pdf',
+    certificateTitle: 'Sertifikat Magang BPS Kota Bandar Lampung',
     details:
-      'Bertanggung jawab dalam pengembangan dan perancangan antarmuka aplikasi web internal yang responsif dan mudah digunakan. Berkolaborasi dengan tim dalam menyajikan data statistik ke dalam bentuk tampilan yang informatif dan terstruktur.'
+      'Mengembangkan antarmuka sistem informasi magang dan monitoring elektronik terpadu (MAGNET) dengan Next.js dan Tailwind CSS, mencakup fitur Laporan Magang, Jadwal & Kuota Magang, serta Cek Status Pendaftaran. Mengintegrasikan antarmuka dengan backend, menguji setiap fitur bersama tim, dan mempresentasikan hasilnya kepada pembimbing dan pihak BPS.'
   },
   {
     id: 2,
@@ -16,7 +18,10 @@ export const experiences = [
     period: 'Sep 2024 – Des 2024',
     type: 'Studi Independen (MSIB)',
     logo: '/metrodata.jpg',
+    certificateUrl: '/certificates/sertifikat-msib-metrodata.pdf',
+    certificateTitle: 'Sertifikat MSIB Data Engineer Metrodata Academy',
     details:
-      'Mengikuti program pelatihan intensif Data Engineering MSIB Kemendikbudristek. Mempelajari dan mempraktikkan perancangan database relasional, pemrosesan data, SQL query optimization, serta analisis data terstruktur.'
+      'Mengikuti program Magang dan Studi Independen Bersertifikat (MSIB) intensif di bidang data engineering. Mempelajari SQL, basis data, dan pengelolaan data, serta menyelesaikan studi kasus dan tugas akhir secara berkelompok.'
   }
 ]
+

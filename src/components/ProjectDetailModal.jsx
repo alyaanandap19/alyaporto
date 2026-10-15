@@ -34,30 +34,30 @@ export default function ProjectDetailModal({ project, onClose }) {
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/60 p-3 sm:p-4 md:p-6 backdrop-blur-sm animate-in fade-in duration-200"
+      className="fixed inset-0 z-[100] flex items-center justify-center overflow-y-auto bg-black/50 p-3 sm:p-4 md:p-6 backdrop-blur-sm"
       onClick={onClose}
       role="dialog"
       aria-modal="true"
       aria-labelledby="modal-project-title"
     >
       <div
-        className="relative my-auto flex max-h-[88vh] w-full max-w-3xl flex-col rounded-2xl sm:rounded-3xl border border-[rgba(17,26,57,0.08)] bg-white shadow-2xl overflow-hidden"
+        className="relative my-auto flex max-h-[88vh] w-full max-w-3xl flex-col rounded-3xl border border-[var(--border)] bg-white shadow-2xl overflow-hidden"
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Modal Sticky Header */}
-        <div className="sticky top-0 z-20 flex items-center justify-between border-b border-[rgba(17,26,57,0.08)] bg-white/95 px-4 py-3 sm:px-6 backdrop-blur-md">
+        {/* Modal Header */}
+        <div className="sticky top-0 z-20 flex items-center justify-between border-b border-[var(--border)] bg-white/95 px-4 py-3 sm:px-6 backdrop-blur-md">
           <div className="flex items-center gap-2.5">
             <button
               type="button"
               onClick={onClose}
-              className="inline-flex items-center gap-1.5 rounded-xl border border-[rgba(17,26,57,0.08)] bg-slate-50 px-3 py-1 text-xs font-bold text-[var(--navy)] transition-colors hover:bg-slate-100 hover:text-[var(--primary)]"
+              className="inline-flex items-center gap-1.5 rounded-full border border-[var(--border)] bg-[var(--bg)] px-3 py-1 text-xs font-bold text-[var(--text)] transition-colors hover:bg-[var(--accent-soft)] hover:text-[var(--accent-dark)]"
             >
               <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M19 12H5M12 19l-7-7 7-7" />
               </svg>
               <span>Kembali</span>
             </button>
-            <span className="text-xs font-semibold text-[var(--navy-soft)]">
+            <span className="text-xs font-semibold text-[var(--text-muted)]">
               Detail Proyek
             </span>
           </div>
@@ -66,7 +66,7 @@ export default function ProjectDetailModal({ project, onClose }) {
             type="button"
             onClick={onClose}
             aria-label="Tutup Detail Proyek"
-            className="flex h-8 w-8 items-center justify-center rounded-xl border border-[rgba(17,26,57,0.08)] bg-slate-50 text-[var(--navy-soft)] transition-colors hover:bg-slate-200 hover:text-[var(--navy)]"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-[var(--border)] bg-[var(--bg)] text-[var(--text-muted)] transition-colors hover:bg-[var(--accent-soft)] hover:text-[var(--accent-dark)]"
           >
             <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M18 6L6 18M6 6l12 12" />
@@ -74,58 +74,66 @@ export default function ProjectDetailModal({ project, onClose }) {
           </button>
         </div>
 
-        {/* Modal Scrollable Body */}
+        {/* Modal Body */}
         <div className="overflow-y-auto px-4 py-5 sm:px-6 sm:py-6 space-y-5">
-          {/* Project Title & Badge Row */}
+          {/* Project Title & Badge */}
           <div>
             <div className="flex flex-wrap items-center gap-2 mb-2">
-              <span className="inline-flex items-center rounded-md bg-[var(--primary-soft)] px-2.5 py-0.5 text-xs font-bold text-[var(--primary)]">
+              <span className="inline-flex items-center rounded-full bg-[var(--accent-soft)] px-2.5 py-0.5 text-xs font-bold text-[var(--accent-dark)]">
                 {project.role}
               </span>
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-[var(--navy-soft)]">
+              <span className="text-[11px] font-bold uppercase tracking-wider text-[var(--accent-dark)]">
                 {project.subtitle}
               </span>
+              {project.institution && (
+                <span className="inline-flex items-center rounded-full bg-[var(--bg)] px-2 py-0.5 text-[11px] font-semibold text-[var(--text-muted)] border border-[var(--border)]">
+                  🏛️ {project.institution}
+                </span>
+              )}
+              {project.period && (
+                <span className="inline-flex items-center rounded-full bg-[var(--bg)] px-2 py-0.5 text-[11px] font-semibold text-[var(--text-muted)] border border-[var(--border)]">
+                  📅 {project.period}
+                </span>
+              )}
             </div>
 
-            <h2 id="modal-project-title" className="text-xl sm:text-2xl font-bold tracking-tight text-[var(--navy)]">
+            <h2 id="modal-project-title" className="text-xl sm:text-2xl font-bold tracking-tight text-[var(--text)]">
               {project.title}
             </h2>
 
-            <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[var(--navy-soft)]">
+            <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[var(--text-muted)]">
               {project.shortDesc}
             </p>
           </div>
 
-          {/* Screenshot Showcase */}
-          <div className="overflow-hidden rounded-xl sm:rounded-2xl border border-[rgba(17,26,57,0.08)] bg-slate-950/5 shadow-inner">
-            <div className="relative flex min-h-[200px] max-h-[380px] w-full items-center justify-center overflow-hidden bg-slate-100/90 p-2">
+          {/* Screenshot */}
+          <div className="overflow-hidden rounded-2xl border border-[var(--border)] shadow-inner">
+            <div className="relative flex min-h-[200px] max-h-[380px] w-full items-center justify-center overflow-hidden bg-[#FAEEE8] p-2">
               <img
                 src={currentScreenshot.image}
                 alt={currentScreenshot.title}
-                className="max-h-[360px] w-full object-contain rounded-lg transition-all duration-300"
+                className="max-h-[360px] w-full object-contain rounded-xl transition-all duration-300"
                 style={{ imageRendering: '-webkit-optimize-contrast' }}
               />
             </div>
 
-            <div className="border-t border-[rgba(17,26,57,0.08)] bg-white p-3 sm:p-4">
+            <div className="border-t border-[var(--border)] bg-white p-3 sm:p-4">
               <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1.5">
                 <div>
-                  <h4 className="font-bold text-xs sm:text-sm text-[var(--navy)]">
+                  <h4 className="font-bold text-xs sm:text-sm text-[var(--text)]">
                     {currentScreenshot.title}
                   </h4>
-                  <p className="text-xs text-[var(--navy-soft)] mt-0.5">
+                  <p className="text-xs text-[var(--text-muted)] mt-0.5">
                     {currentScreenshot.description}
                   </p>
                 </div>
-
                 {project.screenshots?.length > 1 && (
-                  <span className="text-[11px] font-semibold text-[var(--navy-soft)] shrink-0">
+                  <span className="text-[11px] font-semibold text-[var(--text-muted)] shrink-0">
                     {activeImageIndex + 1} / {project.screenshots.length}
                   </span>
                 )}
               </div>
 
-              {/* Multiple Screenshots Thumbnails Selector */}
               {project.screenshots?.length > 1 && (
                 <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
                   {project.screenshots.map((s, idx) => (
@@ -133,9 +141,9 @@ export default function ProjectDetailModal({ project, onClose }) {
                       key={s.title}
                       type="button"
                       onClick={() => setActiveImageIndex(idx)}
-                      className={`relative aspect-[16/9] w-16 sm:w-20 shrink-0 overflow-hidden rounded-lg border-2 transition-all ${
+                      className={`relative aspect-[16/9] w-16 sm:w-20 shrink-0 overflow-hidden rounded-xl border-2 transition-all ${
                         activeImageIndex === idx
-                          ? 'border-[var(--primary)] shadow-sm ring-1 ring-[var(--primary-soft)]'
+                          ? 'border-[var(--accent)] shadow-sm ring-1 ring-[var(--accent-soft)]'
                           : 'border-transparent opacity-60 hover:opacity-100'
                       }`}
                     >
@@ -147,45 +155,44 @@ export default function ProjectDetailModal({ project, onClose }) {
             </div>
           </div>
 
-          {/* Grid Information: Details & Specs */}
+          {/* Grid: Details & Sidebar */}
           <div className="grid gap-5 md:grid-cols-12">
-            {/* Main Content Column (7 Cols on desktop) */}
             <div className="space-y-5 md:col-span-7">
-              {/* Gambaran Proyek */}
+              {/* Overview */}
               <div>
-                <h3 className="flex items-center gap-2 text-sm sm:text-base font-bold text-[var(--navy)]">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-[var(--primary-soft)] text-xs">📌</span>
+                <h3 className="flex items-center gap-2 text-sm sm:text-base font-bold text-[var(--text)]">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--accent-soft)] text-xs">📌</span>
                   Gambaran Proyek
                 </h3>
-                <p className="mt-2 text-justify text-xs sm:text-[0.85rem] leading-relaxed text-[var(--navy-soft)] [text-justify:inter-word]">
+                <p className="mt-2 text-left text-xs sm:text-[0.85rem] leading-relaxed text-[var(--text-muted)]">
                   {project.overview}
                 </p>
               </div>
 
-              {/* Problem / Background */}
+              {/* Problem Background */}
               <div>
-                <h3 className="flex items-center gap-2 text-sm sm:text-base font-bold text-[var(--navy)]">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-amber-100 text-xs text-amber-700">💡</span>
+                <h3 className="flex items-center gap-2 text-sm sm:text-base font-bold text-[var(--text)]">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#FDE8D0] text-xs">💡</span>
                   Latar Belakang & Masalah
                 </h3>
-                <p className="mt-2 text-justify text-xs sm:text-[0.85rem] leading-relaxed text-[var(--navy-soft)] [text-justify:inter-word]">
+                <p className="mt-2 text-left text-xs sm:text-[0.85rem] leading-relaxed text-[var(--text-muted)]">
                   {project.problemBackground}
                 </p>
               </div>
 
               {/* Key Features */}
               <div>
-                <h3 className="flex items-center gap-2 text-sm sm:text-base font-bold text-[var(--navy)]">
-                  <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-emerald-100 text-xs text-emerald-700">✨</span>
+                <h3 className="flex items-center gap-2 text-sm sm:text-base font-bold text-[var(--text)]">
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--accent-soft)] text-xs">✨</span>
                   Fitur Utama
                 </h3>
                 <ul className="mt-2.5 space-y-2">
                   {project.keyFeatures?.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start gap-2.5 rounded-xl border border-[rgba(17,26,57,0.06)] bg-slate-50/80 p-2.5 text-xs font-medium text-[var(--navy)] transition-colors hover:bg-slate-50"
+                      className="flex items-start gap-2.5 rounded-xl border border-[var(--border)] bg-[var(--bg)] p-2.5 text-xs font-medium text-[var(--text)] transition-colors hover:bg-[var(--accent-soft)]"
                     >
-                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[var(--primary)] shrink-0"></span>
+                      <span className="mt-1 h-1.5 w-1.5 rounded-full bg-[var(--accent)] shrink-0"></span>
                       <span className="leading-relaxed">{feature}</span>
                     </li>
                   ))}
@@ -195,14 +202,14 @@ export default function ProjectDetailModal({ project, onClose }) {
               {/* Development Process */}
               {project.developmentProcess && (
                 <div>
-                  <h3 className="flex items-center gap-2 text-sm sm:text-base font-bold text-[var(--navy)]">
-                    <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-indigo-100 text-xs text-indigo-700">⚙️</span>
+                  <h3 className="flex items-center gap-2 text-sm sm:text-base font-bold text-[var(--text)]">
+                    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--accent-soft)] text-xs">⚙️</span>
                     Proses Pengembangan
                   </h3>
                   <ol className="mt-2 space-y-2">
                     {project.developmentProcess.map((step, idx) => (
-                      <li key={step} className="flex items-start gap-2 text-xs text-[var(--navy-soft)]">
-                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[var(--primary-soft)] text-[10px] font-bold text-[var(--primary)]">
+                      <li key={step} className="flex items-start gap-2 text-xs text-[var(--text-muted)]">
+                        <span className="flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-[var(--accent-soft)] text-[10px] font-bold text-[var(--accent-dark)]">
                           {idx + 1}
                         </span>
                         <span className="leading-relaxed">{step}</span>
@@ -213,27 +220,27 @@ export default function ProjectDetailModal({ project, onClose }) {
               )}
             </div>
 
-            {/* Sidebar Column (5 Cols on desktop) */}
+            {/* Sidebar */}
             <div className="space-y-4 md:col-span-5">
-              {/* Role & Contribution Card */}
-              <div className="rounded-xl sm:rounded-2xl border border-[rgba(17,26,57,0.06)] bg-slate-50/90 p-4 shadow-xs">
-                <h4 className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[var(--navy)]">
+              {/* Role & Contribution */}
+              <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-4 shadow-xs">
+                <h4 className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[var(--text)]">
                   <span>👤</span>
                   Peran & Kontribusi
                 </h4>
-                <ul className="mt-2.5 space-y-2 text-xs text-[var(--navy-soft)]">
+                <ul className="mt-2.5 space-y-2 text-xs text-[var(--text-muted)]">
                   {project.roleContribution?.map((c, i) => (
                     <li key={i} className="flex items-start gap-2">
-                      <span className="text-[var(--primary)] font-bold shrink-0">✓</span>
+                      <span className="text-[var(--accent)] font-bold shrink-0">✓</span>
                       <span className="leading-relaxed">{c}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {/* Technologies Card */}
-              <div className="rounded-xl sm:rounded-2xl border border-[rgba(17,26,57,0.06)] bg-slate-50/90 p-4 shadow-xs">
-                <h4 className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[var(--navy)]">
+              {/* Technologies */}
+              <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-4 shadow-xs">
+                <h4 className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[var(--text)]">
                   <span>🛠️</span>
                   Teknologi
                 </h4>
@@ -241,7 +248,7 @@ export default function ProjectDetailModal({ project, onClose }) {
                   {project.technologies?.map((tech) => (
                     <span
                       key={tech}
-                      className="inline-flex items-center rounded-lg bg-white px-2.5 py-1 text-xs font-semibold text-[var(--navy)] border border-[rgba(17,26,57,0.08)] shadow-2xs"
+                      className="inline-flex items-center rounded-full bg-[var(--accent-soft)] px-2.5 py-1 text-xs font-semibold text-[var(--text)] border border-[var(--border)]"
                     >
                       {tech}
                     </span>
@@ -252,12 +259,12 @@ export default function ProjectDetailModal({ project, onClose }) {
           </div>
         </div>
 
-        {/* Modal Bottom Bar */}
-        <div className="flex items-center justify-end border-t border-[rgba(17,26,57,0.08)] bg-slate-50 px-4 py-2.5 sm:px-6">
+        {/* Modal Footer */}
+        <div className="flex items-center justify-end border-t border-[var(--border)] bg-[var(--bg)] px-4 py-2.5 sm:px-6">
           <button
             type="button"
             onClick={onClose}
-            className="btn-primary rounded-xl px-5 py-1.5 text-xs font-bold"
+            className="btn-primary rounded-full px-5 py-1.5 text-xs font-bold"
           >
             Tutup
           </button>
@@ -266,4 +273,3 @@ export default function ProjectDetailModal({ project, onClose }) {
     </div>
   )
 }
-

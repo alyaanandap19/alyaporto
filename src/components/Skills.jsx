@@ -5,33 +5,64 @@ const skillGroups = [
   {
     title: 'Keahlian Teknis',
     icon: '💻',
-    tone: 'bg-[var(--primary-soft)]',
-    items: ['Pengembangan Web', 'Pengembangan Frontend', 'Perancangan UI/UX', 'Pengelolaan Basis Data']
+    items: [
+      'Pengembangan Web',
+      'Pengembangan Frontend',
+      'Perancangan UI/UX',
+      'Pengelolaan Basis Data',
+      'Pengujian Perangkat Lunak'
+    ]
   },
   {
     title: 'Bahasa & Framework',
     icon: '🧩',
-    tone: 'bg-[var(--soft-blue)]',
-    items: ['HTML', 'CSS', 'JavaScript', 'PHP', 'C++', 'SQL', 'React.js', 'Vue.js', 'Next.js', 'Laravel', 'Tailwind CSS']
+    items: [
+      'React.js',
+      'Vue.js',
+      'Next.js',
+      'Tailwind CSS',
+      'JavaScript',
+      'HTML',
+      'CSS',
+      'SQL',
+      'PHP',
+      'Laravel',
+      'C++',
+      'Python'
+    ]
   },
   {
     title: 'Tools',
     icon: '🛠️',
-    tone: 'bg-[var(--soft-green)]',
-    items: ['Visual Studio Code', 'Cursor', 'Git & GitHub', 'Figma', 'SQL Server Management Studio', 'XAMPP', 'Draw.io', 'Trello']
+    items: [
+      'Visual Studio Code',
+      'Git & GitHub',
+      'Figma',
+      'SQL Server Management Studio',
+      'XAMPP',
+      'Draw.io',
+      'Trello'
+    ]
   },
   {
     title: 'Soft Skills',
     icon: '🤝',
-    tone: 'bg-[var(--soft-orange)]',
-    items: ['Kemampuan Analitis', 'Pemecahan Masalah', 'Komunikasi Efektif', 'Kerja Sama Tim']
+    items: [
+      'Kemampuan Analitis',
+      'Pemecahan Masalah',
+      'Komunikasi Efektif',
+      'Kerja Sama Tim'
+    ]
   }
 ]
 
 export default function Skills() {
   return (
     <section id="skills" className="section-shell">
-      <SectionHeader subtitle="Teknologi dan kemampuan yang saya gunakan dalam berbagai proyek.">
+      <SectionHeader
+        eyebrow="KEAHLIAN"
+        subtitle="Teknologi dan kemampuan yang saya gunakan dalam berbagai proyek."
+      >
         Keahlian
       </SectionHeader>
 
@@ -40,19 +71,19 @@ export default function Skills() {
           <div
             key={group.title}
             data-reveal
-            className={`skill-card ${group.tone} flex flex-col justify-between rounded-2xl sm:rounded-3xl border border-[rgba(17,26,57,0.06)] p-6 sm:p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-md`}
+            className="skill-card bg-white flex flex-col justify-between rounded-[1.25rem] border border-[var(--border)] p-6 sm:p-7 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
           >
             <div>
               <div className="mb-5 flex items-center justify-between">
                 <div className="flex items-center gap-3">
-                  <span className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-2xl border border-[rgba(17,26,57,0.08)] bg-white/80 text-xl shadow-xs">
+                  <span className="flex h-11 w-11 sm:h-12 sm:w-12 items-center justify-center rounded-full bg-[var(--accent-soft)] text-xl">
                     {group.icon}
                   </span>
-                  <h3 className="text-lg sm:text-xl font-bold text-[var(--navy)] tracking-tight">
+                  <h3 className="text-lg sm:text-xl font-bold text-[var(--text)] tracking-tight">
                     {group.title}
                   </h3>
                 </div>
-                <span className="rounded-full bg-white/70 px-2.5 py-1 text-xs font-semibold text-[var(--navy-soft)] border border-[rgba(17,26,57,0.06)]">
+                <span className="rounded-full bg-[var(--accent-soft)] px-2.5 py-1 text-xs font-bold text-[var(--accent-dark)]">
                   {group.items.length}
                 </span>
               </div>
@@ -61,7 +92,7 @@ export default function Skills() {
                 {group.items.map((item) => (
                   <span
                     key={item}
-                    className="inline-flex items-center rounded-xl bg-white/85 px-3 py-1.5 text-xs sm:text-[0.84rem] font-medium text-[var(--navy)] border border-[rgba(17,26,57,0.06)] shadow-2xs transition-all duration-200 hover:bg-white hover:shadow-xs hover:-translate-y-0.5"
+                    className="inline-flex items-center rounded-full bg-[var(--accent-soft)] px-3 py-1.5 text-xs sm:text-[0.82rem] font-medium text-[var(--text)] transition-all duration-200 hover:bg-[#f8c4b0] hover:-translate-y-0.5"
                   >
                     {item}
                   </span>

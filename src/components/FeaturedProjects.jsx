@@ -9,11 +9,14 @@ export default function FeaturedProjects() {
 
   return (
     <section id="projects" className="section-shell">
-      <SectionHeader subtitle="Beberapa proyek yang saya kerjakan selama perkuliahan dan pengembangan tugas akhir, dengan fokus pada pengembangan aplikasi web, frontend, UI/UX, serta pengelolaan data.">
-        Proyek
+      <SectionHeader
+        eyebrow="PROYEK"
+        subtitle="Proyek aplikasi web yang saya kembangkan, berfokus pada frontend yang responsif, interaktif, dan berorientasi pada pengalaman pengguna."
+      >
+        Proyek Pilihan
       </SectionHeader>
 
-      <div className="grid gap-6 sm:gap-7 md:grid-cols-2">
+      <div className="grid gap-7 sm:grid-cols-2">
         {projects.map((project) => (
           <div key={project.id} data-reveal className="h-full">
             <ProjectCard project={project} onViewDetail={setSelectedProject} />

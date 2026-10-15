@@ -17,11 +17,9 @@ export default function App() {
   return (
     <div className="app-shell">
       <Navbar />
-      <main className="flex-grow">
+      <main className="flex-grow relative" style={{ zIndex: 1 }}>
         <Hero />
         <div className="container relative">
-          <div className="page-decor-left" aria-hidden="true"></div>
-          <div className="page-decor-right" aria-hidden="true"></div>
           <About />
           <Skills />
           <FeaturedProjects />

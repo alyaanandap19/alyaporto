@@ -1,14 +1,5 @@
 export const certifications = [
   {
-    id: 8,
-    title: 'Data Fundamentals',
-    issuer: 'IBM SkillsBuild',
-    category: 'Data & Analytics',
-    icon: '📊',
-    issuerTone: 'bg-sky-50 text-sky-700 border-sky-200/60',
-    fileUrl: '/certificates/ibm-data-fundamentals.pdf'
-  },
-  {
     id: 7,
     title: 'Web Development Fundamentals',
     issuer: 'IBM SkillsBuild',
@@ -16,6 +7,15 @@ export const certifications = [
     icon: '💻',
     issuerTone: 'bg-sky-50 text-sky-700 border-sky-200/60',
     fileUrl: '/certificates/ibm-web-development.pdf'
+  },
+  {
+    id: 4,
+    title: 'Belajar Dasar Pemrograman Web',
+    issuer: 'Dicoding',
+    category: 'Web Development',
+    icon: '🌐',
+    issuerTone: 'bg-blue-50 text-blue-700 border-blue-200/60',
+    fileUrl: '/certificates/dicoding-web.pdf'
   },
   {
     id: 1,
@@ -45,13 +45,13 @@ export const certifications = [
     fileUrl: '/certificates/oracle-sql.pdf'
   },
   {
-    id: 4,
-    title: 'Belajar Dasar Pemrograman Web',
-    issuer: 'Dicoding',
-    category: 'Web Development',
-    icon: '🌐',
-    issuerTone: 'bg-blue-50 text-blue-700 border-blue-200/60',
-    fileUrl: '/certificates/dicoding-web.pdf'
+    id: 8,
+    title: 'Data Fundamentals',
+    issuer: 'IBM SkillsBuild',
+    category: 'Data & Analytics',
+    icon: '📊',
+    issuerTone: 'bg-sky-50 text-sky-700 border-sky-200/60',
+    fileUrl: '/certificates/ibm-data-fundamentals.pdf'
   },
   {
     id: 5,
