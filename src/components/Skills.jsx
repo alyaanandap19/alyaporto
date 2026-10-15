@@ -60,7 +60,6 @@ export default function Skills() {
   return (
     <section id="skills" className="section-shell">
       <SectionHeader
-        eyebrow="KEAHLIAN"
         subtitle="Teknologi dan kemampuan yang saya gunakan dalam berbagai proyek."
       >
         Keahlian

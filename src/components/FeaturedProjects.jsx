@@ -10,7 +10,6 @@ export default function FeaturedProjects() {
   return (
     <section id="projects" className="section-shell">
       <SectionHeader
-        eyebrow="PROYEK"
         subtitle="Proyek aplikasi web yang saya kembangkan, berfokus pada frontend yang responsif, interaktif, dan berorientasi pada pengalaman pengguna."
       >
         Proyek Pilihan

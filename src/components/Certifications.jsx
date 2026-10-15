@@ -9,7 +9,6 @@ export default function Certifications() {
   return (
     <section id="certifications" className="section-shell">
       <SectionHeader
-        eyebrow="SERTIFIKASI"
         subtitle="Sertifikasi kompetensi dan pelatihan profesional yang telah saya selesaikan untuk memperdalam pemahaman teknis di bidang database, pemrograman web, dan jaringan."
       >
         Sertifikasi

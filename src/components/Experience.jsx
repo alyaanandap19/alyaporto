@@ -9,7 +9,6 @@ export default function Experience() {
   return (
     <section id="experience" className="section-shell">
       <SectionHeader
-        eyebrow="PENGALAMAN"
         subtitle="Pengalaman yang saya peroleh melalui program magang dan kegiatan profesional, dengan fokus pada pengembangan web, frontend, dan pengolahan data."
       >
         Pengalaman Profesional

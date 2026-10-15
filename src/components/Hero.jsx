@@ -1,6 +1,6 @@
 import React from 'react'
 
-const techStrip = ['React.js', 'Vue.js', 'Next.js', 'Tailwind CSS', 'JavaScript', 'SQL', 'Figma']
+const techStrip = ['React.js', 'Vue.js', 'Next.js', 'Tailwind CSS', 'JavaScript', 'HTML', 'CSS', 'SQL', 'PHP', 'Laravel', 'C++', 'Python']
 
 export default function Hero() {
   return (
@@ -201,17 +201,27 @@ export default function Hero() {
       </section>
 
       {/* Tech Strip */}
-      <div className="relative border-t border-b border-[var(--border)] bg-[rgba(255,246,241,0.6)] py-4">
-        <div className="container mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-2">
-            <span className="text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--accent-dark)]">
+      <div className="tech-strip relative border-t border-b border-[var(--border)] bg-[rgba(255,246,241,0.6)] py-3">
+        <div className="tech-strip-inner container mx-auto max-w-[1100px] px-4 sm:px-6 lg:px-8">
+          <span className="tech-strip-label text-[0.7rem] font-bold uppercase tracking-[0.2em] text-[var(--accent-dark)]">
               Teknologi
-            </span>
-            {techStrip.map((tech) => (
-              <span key={tech} className="text-[0.85rem] font-bold text-[var(--text)]">
-                {tech}
-              </span>
-            ))}
+          </span>
+          <div className="tech-marquee" tabIndex={0} aria-label="Daftar teknologi">
+            <div className="tech-marquee-track">
+              {[false, true].map((isDuplicate) => (
+                <div
+                  key={isDuplicate ? 'duplicate' : 'original'}
+                  className="tech-marquee-group"
+                  aria-hidden={isDuplicate ? 'true' : undefined}
+                >
+                  {techStrip.map((tech) => (
+                    <span key={tech} className="tech-marquee-item">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
