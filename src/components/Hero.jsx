@@ -140,9 +140,8 @@ export default function Hero() {
                 <div className="profile-frame">
                   <div className="profile-photo">
                     <img
-                      src="/profile.jpg"
+                      src="/profile.JPG"
                       alt="Alya Ananda Putri"
-                      className="transition-transform duration-500 hover:scale-105"
                     />
                   </div>
                 </div>
