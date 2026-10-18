@@ -42,13 +42,13 @@ export default function About() {
   return (
     <section id="about" className="section-shell">
       <SectionHeader
-        subtitle="Lulusan Teknik Informatika yang berfokus pada pengembangan frontend dan web, dengan perhatian pada antarmuka yang nyaman dipakai."
+        subtitle="Membangun tampilan web yang rapi, responsif, dan nyaman dipakai."
       >
         Tentang Saya
       </SectionHeader>
 
       <p className="about-copy" data-reveal>
-        Saya suka mengerjakan bagian web yang langsung dilihat dan dipakai orang. Dalam proyek tim, saya mengerjakan frontend dari desain Figma sampai terhubung dengan backend, dan menguji setiap fitur sebelum diserahkan. Pengalaman saya mencakup sistem informasi magang di BPS Kota Bandar Lampung dan platform e‑commerce U-Market.
+        Saya lulusan Teknik Informatika yang bersemangat dalam bidang pengembangan web dan antarmuka pengguna. Dengan pengalaman magang sebagai Data Engineer dan Frontend Developer, saya memiliki kemampuan untuk merancang, membangun, dan mengoptimalkan aplikasi yang efisien dan user-friendly. Fokus utama saya adalah menciptakan pengalaman digital yang inovatif dan berkesan bagi pengguna.
       </p>
 
       <div className="about-info-grid mt-8 sm:mt-9">
