@@ -140,7 +140,7 @@ export default function Hero() {
                 <div className="profile-frame">
                   <div className="profile-photo">
                     <img
-                      src="/profile.JPG"
+                      src={`${import.meta.env.BASE_URL}profile-photo.jpg`}
                       alt="Alya Ananda Putri"
                     />
                   </div>
