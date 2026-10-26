@@ -3,60 +3,118 @@ export const projects = [
     id: 1,
     slug: 'u-market',
     title: 'U-Market',
-    subtitle: 'Platform E-Commerce',
+    subtitle: 'Platform E-Commerce Kampus',
     institution: 'Universitas Lampung',
     period: 'Nov 2025 – Apr 2026',
     role: 'Frontend Developer',
-    technologies: ['Vue.js', 'JavaScript', 'Tailwind CSS', 'Figma', 'Scrum'],
-    shortDesc: 'Platform e-commerce berbasis website yang dikembangkan sebagai proyek tugas akhir (skripsi) menggunakan Vue.js dan Tailwind CSS dengan metode Scrum.',
-    thumbnail: '/projects/umarket_thumb.jpg',
+    technologies: ['Vue.js', 'JavaScript', 'Tailwind CSS', 'Figma', 'Scrum', 'Git/GitHub', 'Trello', 'Vue Router', 'axios'],
+    shortDesc: 'Frontend website e-commerce untuk komunitas jual beli Universitas Lampung yang menggantikan grup WhatsApp "U Marketplace". Dibangun dengan Vue.js dan Tailwind CSS memakai metode Scrum (4 sprint) sebagai proyek skripsi.',
+    cardDesc: 'Platform e-commerce kampus berbasis Vue.js dan Tailwind CSS dengan 21 halaman dan fitur untuk pembeli, penjual, dan admin. UEQ: 5 dari 6 dimensi Excellent.',
+    thumbnail: '/projects/umarket_thumbnail.png',
     badgeTone: 'bg-[var(--primary-soft)] text-[var(--primary)]',
     overview:
-      'U-Market adalah platform e-commerce berbasis website yang dirancang dan dikembangkan sebagai proyek tugas akhir (skripsi) di S1 Teknik Informatika Universitas Lampung. Platform ini berfokus pada pengalaman pengguna yang responsif, interaktif, dan terstruktur untuk mempermudah transaksi jual beli dengan alur yang modern.',
+      'Frontend website e-commerce untuk komunitas jual beli Universitas Lampung yang menggantikan grup WhatsApp "U Marketplace". Dibangun dengan Vue.js dan Tailwind CSS memakai metode Scrum (4 sprint) sebagai proyek skripsi.',
     problemBackground:
-      'Aktivitas jual-beli barang antar mahasiswa sebelumnya sering tersebar di berbagai platform chat informal tanpa katalog produk yang jelas, filter pencarian terstruktur, maupun sistem manajemen toko. U-Market hadir sebagai platform marketplace terpadu yang mempermudah proses pencarian, pembelian, dan pengelolaan toko secara efisien.',
-    roleContribution: [
-      'Mendesain antarmuka pengguna menggunakan Figma sebagai acuan dalam pengembangan frontend.',
-      'Mengimplementasikan desain antarmuka menjadi aplikasi web yang responsif, interaktif, dan berorientasi pada pengalaman pengguna.',
-      'Berkolaborasi dengan tim menggunakan metode Scrum dalam proses perencanaan, pengembangan, dan penyelesaian fitur aplikasi.',
-      'Mengintegrasikan antarmuka pengguna dengan backend serta melakukan pengujian untuk memastikan fungsionalitas sistem berjalan dengan baik.'
+      'Survei terhadap 34 pengguna grup WhatsApp "U Marketplace" menunjukkan masalah utama: informasi produk cepat tertimbun, pencarian sulit, dan konfirmasi pesanan masih manual. U-Market dibuat sebagai platform terpusat dengan katalog, pencarian, keranjang, dan status pesanan.',
+    projectLinks: [
+      { label: 'GitHub Repository', url: 'https://github.com/alyaananda19/E-Commerce-U-Market' },
+      { label: 'Desain Figma', url: 'https://www.figma.com/design/rNeNJWTLGPSDrvweBg0dRt/umarket-hi-fi?node-id=1-2&t=U2L5297Hxdye1cmx-1' }
     ],
-    keyFeatures: [
-      'Katalog & Pencarian Produk Interaktif dengan Filter Kategori',
-      'Halaman Detail Produk Lengkap & Pilihan Varian',
-      'Shopping Cart & Ringkasan Checkout Dinamis',
-      'Dashboard Merchant "Toko Saya" & Inventaris Produk',
-      'Manajemen Profil Pengguna & Riwayat Pesanan'
+    team: 'Tim 4 orang: Product Owner, Scrum Master, Frontend Developer (saya), Backend Developer.',
+    roleContribution: [
+      'Merancang 15 desain High Fidelity di Figma sebagai acuan frontend',
+      'Mengimplementasikan 21 halaman dan fitur dengan Vue.js dan Tailwind CSS dalam 3 sprint implementasi, untuk sisi pengguna dan admin',
+      'Mengintegrasikan antarmuka dengan backend dari rekan tim menggunakan API',
+      'Menjalankan Blackbox Testing dan evaluasi UEQ dengan 50 responden',
+      'Berkolaborasi dalam sprint planning, daily scrum, review, dan retrospective'
+    ],
+    featureGroups: [
+      {
+        title: 'Pembeli',
+        items: [
+          'Katalog produk di landing dan beranda',
+          'Pencarian produk berdasarkan nama produk atau toko',
+          'Detail produk dengan pemilih jumlah sesuai stok',
+          'Keranjang: pilih semua, ubah jumlah, hapus item',
+          'Checkout dengan ringkasan per toko dan halaman konfirmasi pesanan',
+          'Pesanan Saya per status dengan tombol Hubungi Penjual',
+          'Profil pengguna dan pengelolaan rekening bank'
+        ]
+      },
+      {
+        title: 'Penjual',
+        items: [
+          'Toko Saya: saldo penjualan, ringkasan pesanan (masuk, perlu dikirim, dikirim), tabel produk dengan tambah, ubah, hapus',
+          'Profil toko publik berisi galeri produk'
+        ]
+      },
+      {
+        title: 'Admin',
+        items: [
+          'Dashboard: jumlah pengguna, total transaksi, grafik penjualan, produk populer',
+          'Manajemen produk, manajemen pengguna, riwayat penjualan'
+        ]
+      },
+      {
+        title: 'Umum',
+        items: [
+          'Login dan register dengan validasi form, navigasi sesuai status login, konfirmasi logout, halaman Syarat & Ketentuan dan Hubungi Kami'
+        ]
+      }
+    ],
+    testResults: [
+      { label: 'Blackbox Testing', value: 'Valid', detail: 'Seluruh test case valid' },
+      { label: 'UEQ Excellent', value: '5 dari 6', detail: 'Dimensi' },
+      { label: 'UEQ Good', value: '1 dari 6', detail: 'Dimensi' },
+      { label: 'Efisiensi', value: '2,07', detail: 'Mean UEQ' },
+      { label: 'Kejelasan', value: '2,04', detail: 'Mean UEQ' },
+      { label: 'Daya Tarik', value: '2,00', detail: 'Mean UEQ' },
+      { label: 'Ketepatan', value: '1,99', detail: 'Mean UEQ' },
+      { label: 'Stimulasi', value: '1,87', detail: 'Mean UEQ' },
+      { label: 'Kebaruan', value: '1,32', detail: 'Mean UEQ' }
     ],
     screenshots: [
       {
-        title: 'Halaman Utama & Katalog Produk',
-        image: '/projects/umarket_thumb.jpg',
-        description: 'Tampilan beranda dengan grid kartu produk yang responsif dan filter kategori.'
+        title: 'Halaman Beranda',
+        image: '/projects/umarket_home.png',
+        description: 'Beranda U-Market menampilkan katalog produk dan pencarian.'
       },
       {
-        title: 'Halaman Detail Produk',
-        image: '/projects/umarket_product.jpg',
-        description: 'Halaman rincian produk dengan galeri foto, spesifikasi, dan pilihan varian.'
+        title: 'Detail Produk',
+        image: '/projects/umarket_product_detail.png',
+        description: 'Halaman detail produk menampilkan informasi produk, stok, dan pilihan jumlah.'
       },
       {
-        title: 'Keranjang Belanja & Checkout',
-        image: '/projects/umarket_cart.jpg',
-        description: 'Alur keranjang belanja interaktif dengan kalkulasi otomatis subtotal dan ringkasan pesanan.'
+        title: 'Halaman Keranjang',
+        image: '/projects/umarket_cart_page.png',
+        description: 'Keranjang belanja menampilkan pilihan item dan pengaturan jumlah produk.'
       },
       {
-        title: 'Dashboard Penjual',
-        image: '/projects/umarket_profile.jpg',
-        description: 'Panel admin toko untuk memantau ringkasan pendapatan, pesanan baru, dan manajemen inventaris produk.'
+        title: 'Halaman Pesanan Saya',
+        image: '/projects/umarket_my_orders.png',
+        description: 'Halaman pesanan menampilkan produk yang dibeli, status pesanan, dan tombol Hubungi Penjual.'
+      },
+      {
+        title: 'Halaman Toko Saya',
+        image: '/projects/umarket_my_store.png',
+        description: 'Halaman penjual menampilkan saldo, ringkasan pesanan, dan tabel pengelolaan produk.'
+      },
+      {
+        title: 'Beranda Admin',
+        image: '/projects/umarket_admin_dashboard.png',
+        description: 'Dashboard admin menampilkan jumlah pengguna, riwayat transaksi, diagram penjualan, dan produk populer.'
+      },
+      {
+        title: 'Manajemen Pengguna Admin',
+        image: '/projects/umarket_admin_users.png',
+        description: 'Halaman admin menampilkan daftar pengguna beserta status, jumlah produk, dan opsi pengelolaan.'
+      },
+      {
+        title: 'Grafik Benchmark Pengujian UEQ',
+        image: '/projects/umarket_ueq_benchmark.png',
+        description: 'Grafik benchmark menampilkan kategori hasil dan nilai mean pada enam dimensi UEQ.'
       }
     ],
-    developmentProcess: [
-      'Analisis Kebutuhan Pengguna & Perancangan Alur (User Flow)',
-      'Perancangan Antarmuka & Design System menggunakan Figma',
-      'Pengembangan Komponen Frontend menggunakan Vue.js & Tailwind CSS',
-      'Penerapan Metode Scrum (Sprint Planning, Development, & Review)',
-      'Integrasi Antarmuka Pengguna dengan Backend & Pengujian Sistem'
-    ]
   },
   {
     id: 2,

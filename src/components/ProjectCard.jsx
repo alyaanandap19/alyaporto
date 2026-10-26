@@ -4,12 +4,12 @@ export default function ProjectCard({ project, onViewDetail }) {
   return (
     <article className="project-card group flex h-full flex-col justify-between overflow-hidden rounded-[1.25rem] border border-[var(--border)] bg-white p-4 sm:p-5 shadow-[var(--shadow-card)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
       <div>
-        {/* Project Thumbnail 16:9 */}
-        <div className="relative aspect-[16/9] w-full overflow-hidden rounded-2xl border border-[var(--border)] bg-[#FAEEE8]">
+        {/* Project Thumbnail */}
+        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-2xl border border-[var(--border)] bg-[#FDF3F4]">
           <img
             src={project.thumbnail}
             alt={project.title}
-            className="h-full w-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            className={`h-full w-full object-cover ${project.slug === 'u-market' ? '' : 'object-top transition-transform duration-500 group-hover:scale-105'}`}
             style={{ imageRendering: '-webkit-optimize-contrast' }}
             loading="lazy"
           />
@@ -38,7 +38,7 @@ export default function ProjectCard({ project, onViewDetail }) {
           </h3>
 
           <p className="mt-2 text-left text-[0.85rem] sm:text-[0.9rem] leading-relaxed text-[var(--text-muted)] line-clamp-4">
-            {project.shortDesc}
+            {project.cardDesc || project.shortDesc}
           </p>
         </div>
       </div>
