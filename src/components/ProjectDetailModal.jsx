@@ -102,16 +102,20 @@ export default function ProjectDetailModal({ project, onClose }) {
             </div>
 
             <h2 id="modal-project-title" className="text-xl sm:text-2xl font-bold tracking-tight text-[var(--text)]">
-              {project.slug === 'u-market' ? `${project.title}, ${project.subtitle}` : project.title}
+              {project.slug === 'u-market'
+                ? `${project.title}, ${project.subtitle}`
+                : project.slug === 'magnet'
+                  ? `${project.title}, Sistem Informasi Magang ${project.institution}`
+                  : project.title}
             </h2>
 
             <p className="mt-1.5 text-xs sm:text-sm leading-relaxed text-[var(--text-muted)]">
               {project.shortDesc}
             </p>
 
-            {project.projectLinks?.length > 0 && (
+            {project.projectLinks?.some((link) => link.url) && (
               <div className="mt-3 flex flex-wrap gap-2">
-                {project.projectLinks.map((link) => link.url ? (
+                {project.projectLinks.filter((link) => link.url).map((link) => (
                   <a
                     key={link.label}
                     href={link.url}
@@ -121,13 +125,6 @@ export default function ProjectDetailModal({ project, onClose }) {
                   >
                     {link.label}
                   </a>
-                ) : (
-                  <span
-                    key={link.label}
-                    className="inline-flex items-center rounded-full border border-[var(--border)] bg-[var(--bg)] px-3 py-1.5 text-xs font-semibold text-[var(--text-muted)]"
-                  >
-                    {link.label}
-                  </span>
                 ))}
               </div>
             )}
@@ -182,6 +179,11 @@ export default function ProjectDetailModal({ project, onClose }) {
               )}
             </div>
           </div>
+          {project.slug === 'magnet' && (
+            <p className="text-[11px] text-[var(--text-muted)]">
+              Data peserta pada tampilan telah disamarkan.
+            </p>
+          )}
 
           {/* Grid: Details & Sidebar */}
           <div className="grid gap-5 md:grid-cols-12">
@@ -239,7 +241,7 @@ export default function ProjectDetailModal({ project, onClose }) {
                 </ul>
               </div>
 
-              {project.testResults && (
+              {project.testResults && project.slug !== 'magnet' && (
                 <div>
                   <h3 className="flex items-center gap-2 text-sm sm:text-base font-bold text-[var(--text)]">
                     <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[var(--accent-soft)] text-xs">📊</span>
@@ -317,6 +319,25 @@ export default function ProjectDetailModal({ project, onClose }) {
                   ))}
                 </div>
               </div>
+
+              {project.slug === 'magnet' && project.testResults && (
+                <div className="rounded-2xl border border-[var(--border)] bg-[var(--bg)] p-4 shadow-xs">
+                  <h4 className="flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[var(--text)]">
+                    <span>📊</span>
+                    Hasil
+                  </h4>
+                  <ul className="mt-2.5 space-y-2 text-xs text-[var(--text-muted)]">
+                    {project.testResults.map((result) => (
+                      <li key={result.label} className="flex items-start gap-2">
+                        <span className="text-[var(--accent)] font-bold shrink-0">✓</span>
+                        <span className="leading-relaxed">
+                          {result.label}: {result.value}, {result.detail}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>

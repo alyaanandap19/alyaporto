@@ -9,7 +9,7 @@ export default function ProjectCard({ project, onViewDetail }) {
           <img
             src={project.thumbnail}
             alt={project.title}
-            className={`h-full w-full object-cover ${project.slug === 'u-market' ? '' : 'object-top transition-transform duration-500 group-hover:scale-105'}`}
+            className={`h-full w-full ${project.slug === 'u-market' ? 'object-contain' : 'object-cover object-top transition-transform duration-500 group-hover:scale-105'}`}
             style={{ imageRendering: '-webkit-optimize-contrast' }}
             loading="lazy"
           />
@@ -37,16 +37,16 @@ export default function ProjectCard({ project, onViewDetail }) {
             {project.title}
           </h3>
 
-          <p className="mt-2 text-left text-[0.85rem] sm:text-[0.9rem] leading-relaxed text-[var(--text-muted)] line-clamp-4">
+          <p className={`mt-2 text-left text-[0.85rem] sm:text-[0.9rem] leading-relaxed text-[var(--text-muted)] ${project.slug === 'magnet' ? 'line-clamp-3' : 'line-clamp-4'}`}>
             {project.cardDesc || project.shortDesc}
           </p>
         </div>
       </div>
 
-      <div className="mt-4 pt-3 border-t border-[var(--border)]">
+      <div className="mt-auto pt-3 border-t border-[var(--border)]">
         {/* Technologies */}
         <div className="flex flex-wrap gap-1.5 mb-4">
-          {project.technologies.map((tech) => (
+          {project.technologies.filter((tech) => project.slug !== 'magnet' || tech !== 'React').map((tech) => (
             <span
               key={tech}
               className="inline-flex items-center rounded-full bg-[var(--accent-soft)] px-2.5 py-0.5 text-[0.72rem] font-medium text-[var(--text)]"
