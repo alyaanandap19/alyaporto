@@ -6,7 +6,9 @@ export const certifications = [
     category: 'Web Development',
     icon: '💻',
     issuerTone: 'bg-sky-50 text-sky-700 border-sky-200/60',
-    fileUrl: '/certificates/ibm-web-development.pdf'
+    fileUrl: '/certificates/ibm-web-development.pdf',
+    hidden: false,
+    publicationYear: 2024
   },
   {
     id: 4,
@@ -15,7 +17,9 @@ export const certifications = [
     category: 'Web Development',
     icon: '🌐',
     issuerTone: 'bg-blue-50 text-blue-700 border-blue-200/60',
-    fileUrl: '/certificates/dicoding-web.pdf'
+    fileUrl: '/certificates/dicoding-web.pdf',
+    hidden: false,
+    publicationYear: 2024
   },
   {
     id: 1,
@@ -24,7 +28,9 @@ export const certifications = [
     category: 'Database & SQL',
     icon: '🗄️',
     issuerTone: 'bg-red-50 text-red-700 border-red-200/60',
-    fileUrl: '/certificates/dicoding-sql.pdf'
+    fileUrl: '/certificates/dicoding-sql.pdf',
+    hidden: false,
+    publicationYear: 2023
   },
   {
     id: 2,
@@ -33,16 +39,9 @@ export const certifications = [
     category: 'Database Design',
     icon: '📐',
     issuerTone: 'bg-red-50 text-red-700 border-red-200/60',
-    fileUrl: '/certificates/oracle-design.pdf'
-  },
-  {
-    id: 3,
-    title: 'Belajar Dasar Structured Query Language (SQL)',
-    issuer: 'Dicoding',
-    category: 'Database',
-    icon: '💾',
-    issuerTone: 'bg-blue-50 text-blue-700 border-blue-200/60',
-    fileUrl: '/certificates/oracle-sql.pdf'
+    fileUrl: '/certificates/oracle-design.pdf',
+    hidden: false,
+    publicationYear: 2023
   },
   {
     id: 8,
@@ -51,7 +50,9 @@ export const certifications = [
     category: 'Data & Analytics',
     icon: '📊',
     issuerTone: 'bg-sky-50 text-sky-700 border-sky-200/60',
-    fileUrl: '/certificates/ibm-data-fundamentals.pdf'
+    fileUrl: '/certificates/ibm-data-fundamentals.pdf',
+    hidden: false,
+    publicationYear: 2024
   },
   {
     id: 5,
@@ -60,7 +61,9 @@ export const certifications = [
     category: 'Python',
     icon: '🐍',
     issuerTone: 'bg-emerald-50 text-emerald-700 border-emerald-200/60',
-    fileUrl: '/certificates/cisco-python.pdf'
+    fileUrl: '/certificates/cisco-python.pdf',
+    hidden: false,
+    publicationYear: 2023
   },
   {
     id: 6,
@@ -69,7 +72,52 @@ export const certifications = [
     category: 'Networking',
     icon: '🔌',
     issuerTone: 'bg-emerald-50 text-emerald-700 border-emerald-200/60',
-    fileUrl: '/certificates/cisco-ccna.pdf'
+    fileUrl: '/certificates/cisco-ccna.pdf',
+    hidden: false,
+    publicationYear: 2023
+  },
+  {
+    id: 9,
+    title: 'Artificial Intelligence Fundamentals',
+    issuer: 'IBM SkillsBuild',
+    category: 'AI',
+    icon: '🤖',
+    issuerTone: 'bg-sky-50 text-sky-700 border-sky-200/60',
+    fileUrl: '/certificates/Artificial_Intelligence_Fundamentals.pdf',
+    hidden: false,
+    publicationYear: 2025
+  },
+  {
+    id: 3,
+    title: 'Belajar Dasar Structured Query Language (SQL)',
+    issuer: 'Dicoding',
+    category: 'Database',
+    icon: '💾',
+    issuerTone: 'bg-blue-50 text-blue-700 border-blue-200/60',
+    fileUrl: '/certificates/oracle-sql.pdf',
+    hidden: true,
+    publicationYear: 2023
+  },
+  {
+    id: 10,
+    title: 'Memulai Dasar Pemrograman untuk Menjadi Pengembang Software',
+    issuer: 'Dicoding',
+    category: 'Programming',
+    icon: '🧑‍💻',
+    issuerTone: 'bg-blue-50 text-blue-700 border-blue-200/60',
+    fileUrl: '/certificates/sertifikat_dasar_pemrograman.pdf',
+    hidden: true,
+    publicationYear: 2023
+  },
+  {
+    id: 11,
+    title: 'Belajar Dasar Manajemen Proyek',
+    issuer: 'Dicoding',
+    category: 'Project Management',
+    icon: '📋',
+    issuerTone: 'bg-blue-50 text-blue-700 border-blue-200/60',
+    fileUrl: '/certificates/sertifikat_manajemen_proyek.pdf',
+    hidden: true,
+    publicationYear: 2023
   }
 ]
-
