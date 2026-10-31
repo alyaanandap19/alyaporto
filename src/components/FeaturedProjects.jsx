@@ -10,7 +10,7 @@ export default function FeaturedProjects() {
   return (
     <section id="projects" className="section-shell">
       <SectionHeader
-        subtitle="Proyek aplikasi web yang saya kembangkan, berfokus pada frontend yang responsif, interaktif, dan berorientasi pada pengalaman pengguna."
+        subtitle="Proyek aplikasi web yang saya kembangkan, mencakup frontend yang responsif dan interaktif serta backend yang mendukung fitur aplikasi."
       >
         Proyek Pilihan
       </SectionHeader>

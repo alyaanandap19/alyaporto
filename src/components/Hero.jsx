@@ -1,6 +1,6 @@
 import React from 'react'
 
-const techStrip = ['React.js', 'Vue.js', 'Next.js', 'Tailwind CSS', 'JavaScript', 'HTML', 'CSS', 'SQL', 'PHP', 'Laravel', 'C++', 'Python']
+const techStrip = ['Laravel', 'PHP', 'Next.js', 'React.js', 'Vue.js', 'JavaScript', 'Tailwind CSS', 'HTML', 'CSS', 'SQL', 'MySQL', 'Git', 'Python', 'C++']
 
 export default function Hero() {
   return (
@@ -49,21 +49,21 @@ export default function Hero() {
                 data-reveal
                 className="reveal mt-4 text-[1.1rem] font-semibold sm:text-[1.25rem] text-[var(--text)]"
               >
-                <span className="text-[var(--text)]">Frontend Developer</span>
+                <span className="text-[var(--text)]">Full Stack Developer</span>
                 <span className="mx-2.5 font-normal text-[var(--border)]">|</span>
-                <span className="text-[var(--text)]">Web Developer</span>
+                <span className="text-[var(--text)]">Laravel &amp; Next.js</span>
               </p>
 
               <p
                 data-reveal
                 className="reveal mt-4 max-w-[520px] text-left text-[1rem] leading-[1.7] text-[var(--text-muted)] md:text-[1.05rem]"
               >
-                Saya mengembangkan aplikasi web dan membangun antarmuka yang responsif dan nyaman dipakai, dari desain Figma sampai terhubung dengan backend dan teruji di setiap fitur.
+                Saya mengembangkan aplikasi web dengan fokus pada antarmuka responsif dari desain Figma, serta terlibat dalam pengembangan backend dengan Laravel dan MySQL, dan menguji setiap fitur.
               </p>
 
               {/* Tech Chips */}
               <div data-reveal className="reveal mt-5 flex flex-wrap gap-2">
-                {['React.js', 'Vue.js', 'Next.js', 'Tailwind CSS', 'Figma', 'SQL'].map((tech) => (
+                {['Laravel', 'PHP', 'Next.js', 'Vue.js', 'Tailwind CSS', 'SQL'].map((tech) => (
                   <span
                     key={tech}
                     className="inline-flex items-center rounded-full bg-[var(--accent-soft)] px-3 py-1.5 text-[0.78rem] font-semibold text-[var(--text)] transition-colors hover:bg-[#f8c4b0]"

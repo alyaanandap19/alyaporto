@@ -34,7 +34,7 @@ const infoCards = [
     icon: '✦',
     label: 'Minat',
     heading: 'Fokus Pengembangan',
-    points: ['Frontend Development', 'Web Development', 'UI/UX Design']
+    points: ['Full Stack Web Development', 'Frontend Development', 'UI/UX Design']
   }
 ]
 
@@ -42,13 +42,13 @@ export default function About() {
   return (
     <section id="about" className="section-shell">
       <SectionHeader
-        subtitle="Membangun tampilan web yang rapi, responsif, dan nyaman dipakai."
+        subtitle="Membangun aplikasi web dari antarmuka hingga backend."
       >
         Tentang Saya
       </SectionHeader>
 
       <p className="about-copy" data-reveal>
-        Saya lulusan Teknik Informatika yang bersemangat dalam bidang pengembangan web dan antarmuka pengguna. Dengan pengalaman magang sebagai Data Engineer dan Frontend Developer, saya memiliki kemampuan untuk merancang, membangun, dan mengoptimalkan aplikasi yang efisien dan user-friendly. Fokus utama saya adalah menciptakan pengalaman digital yang inovatif dan berkesan bagi pengguna.
+        Saya lulusan Teknik Informatika yang bersemangat dalam pengembangan web, dari perancangan antarmuka hingga pengembangan backend dengan Laravel. Dengan pengalaman magang sebagai Data Engineer dan Frontend Developer, serta proyek skripsi U-Market yang mencakup frontend dan backend, saya terbiasa menjalani alur pengembangan end-to-end: analisis kebutuhan, perancangan, pengembangan, pengujian, dan dokumentasi. Saya juga memanfaatkan AI tools untuk membantu debugging dan penyusunan dokumentasi.
       </p>
 
       <div className="about-info-grid mt-8 sm:mt-9">

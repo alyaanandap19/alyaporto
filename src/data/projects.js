@@ -6,10 +6,10 @@ export const projects = [
     subtitle: 'Platform E-Commerce Kampus',
     institution: 'Universitas Lampung',
     period: 'Nov 2025 – Apr 2026',
-    role: 'Frontend Developer',
-    technologies: ['Vue.js', 'JavaScript', 'Tailwind CSS', 'Figma', 'Scrum', 'Git/GitHub', 'Trello', 'Vue Router', 'axios'],
+    role: 'Frontend & Laravel Developer',
+    technologies: ['Laravel', 'PHP', 'MySQL', 'Vue.js', 'JavaScript', 'Tailwind CSS', 'Figma', 'Scrum', 'Git/GitHub', 'Trello', 'Vue Router', 'axios'],
     shortDesc: 'Frontend website e-commerce untuk komunitas jual beli Universitas Lampung yang menggantikan grup WhatsApp "U Marketplace". Dibangun dengan Vue.js dan Tailwind CSS memakai metode Scrum (4 sprint) sebagai proyek skripsi.',
-    cardDesc: 'Platform e-commerce kampus berbasis Vue.js dan Tailwind CSS dengan 21 halaman dan fitur untuk pembeli, penjual, dan admin. UEQ: 5 dari 6 dimensi Excellent.',
+    cardDesc: 'Platform e-commerce kampus dengan frontend Vue.js dan Tailwind CSS serta backend Laravel, terdiri dari 21 halaman dan fitur untuk pembeli, penjual, dan admin. Mencakup autentikasi dan pembagian peran, CRUD produk, migration database, REST API. Hasil evaluasi UEQ: 5 dari 6 dimensi Excellent.',
     thumbnail: '/projects/umarket_thumbnail.png',
     badgeTone: 'bg-[var(--primary-soft)] text-[var(--primary)]',
     overview:

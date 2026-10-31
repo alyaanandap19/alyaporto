@@ -8,6 +8,7 @@ const skillGroups = [
     items: [
       'Pengembangan Web',
       'Pengembangan Frontend',
+      'Pengembangan Backend (Laravel)',
       'Perancangan UI/UX',
       'Pengelolaan Basis Data',
       'Pengujian Perangkat Lunak'
@@ -17,18 +18,19 @@ const skillGroups = [
     title: 'Bahasa & Framework',
     icon: '🧩',
     items: [
+      'Laravel',
+      'PHP',
+      'Next.js',
       'React.js',
       'Vue.js',
-      'Next.js',
-      'Tailwind CSS',
       'JavaScript',
+      'Tailwind CSS',
       'HTML',
       'CSS',
       'SQL',
-      'PHP',
-      'Laravel',
-      'C++',
-      'Python'
+      'MySQL',
+      'Python',
+      'C++'
     ]
   },
   {
