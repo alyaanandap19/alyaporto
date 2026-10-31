@@ -58,12 +58,12 @@ export default function Hero() {
                 data-reveal
                 className="reveal mt-4 max-w-[520px] text-left text-[1rem] leading-[1.7] text-[var(--text-muted)] md:text-[1.05rem]"
               >
-                Saya mengembangkan aplikasi web dengan fokus pada antarmuka responsif dari desain Figma, serta terlibat dalam pengembangan backend dengan Laravel dan MySQL, dan menguji setiap fitur.
+                Saya mengembangkan aplikasi web dengan fokus pada antarmuka responsif dari desain Figma, terlibat dalam pengembangan backend dengan Laravel dan MySQL, serta menguji setiap fitur.
               </p>
 
               {/* Tech Chips */}
               <div data-reveal className="reveal mt-5 flex flex-wrap gap-2">
-                {['Laravel', 'PHP', 'Next.js', 'Vue.js', 'Tailwind CSS', 'SQL'].map((tech) => (
+                {['Laravel', 'PHP', 'Next.js', 'Vue.js', 'Tailwind CSS', 'MySQL'].map((tech) => (
                   <span
                     key={tech}
                     className="inline-flex items-center rounded-full bg-[var(--accent-soft)] px-3 py-1.5 text-[0.78rem] font-semibold text-[var(--text)] transition-colors hover:bg-[#f8c4b0]"
